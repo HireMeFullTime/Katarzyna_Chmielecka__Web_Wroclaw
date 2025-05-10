@@ -6,7 +6,8 @@ export interface Product {
 
 export interface ButtonProps {
     name: string;
-    onClick: () => void
+    onClick: () => void;
+    disabled?: unknown;
 }
 
 export interface ProductListProps {
