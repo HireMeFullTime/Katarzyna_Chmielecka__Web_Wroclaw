@@ -9,13 +9,13 @@ import SummaryPage from './pages/SummaryPage';
 function App() {
 	return (
 		<div className='App'>
-      <BrowserRouter basename='/Katarzyna_Chmielecka__Web_Wroclaw'>
-			<Routes>
-				<Route path='/Katarzyna_Chmielecka__Web_Wroclaw' element={<HomePage />} />
-				<Route path='/Katarzyna_Chmielecka__Web_Wroclaw/basket' element={<BasketPage />} />
-				<Route path='/Katarzyna_Chmielecka__Web_Wroclaw/summary' element={<SummaryPage />} />
-			</Routes>
-      </BrowserRouter>
+			<BrowserRouter basename='/Katarzyna_Chmielecka__Web_Wroclaw'>
+				<Routes>
+					<Route path='/' element={<HomePage />} />
+					<Route path='/basket' element={<BasketPage />} />
+					<Route path='/summary' element={<SummaryPage />} />
+				</Routes>
+			</BrowserRouter>
 		</div>
 	);
 }
