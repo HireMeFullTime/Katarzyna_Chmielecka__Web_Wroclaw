@@ -4,11 +4,17 @@ export interface Product {
     price: { main: number; fractional: number };
 }
 
-export interface ButtonProps{
-    name:string;
-    onClick:() => void
+export interface ButtonProps {
+    name: string;
+    onClick: () => void
 }
 
 export interface ProductListProps {
-	products: Product[];
+    products: Product[];
+}
+
+export type CartItem = Product & { quantity: number }
+
+export interface CartState {
+    cart: CartItem[];
 }
