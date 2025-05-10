@@ -9,7 +9,7 @@ import SummaryPage from './pages/SummaryPage';
 function App() {
 	return (
 		<div className='App'>
-      <BrowserRouter>
+      <BrowserRouter basename='/Katarzyna_Chmielecka__Web_Wroclaw'>
 			<Routes>
 				<Route path='/Katarzyna_Chmielecka__Web_Wroclaw' element={<HomePage />} />
 				<Route path='/Katarzyna_Chmielecka__Web_Wroclaw/basket' element={<BasketPage />} />
