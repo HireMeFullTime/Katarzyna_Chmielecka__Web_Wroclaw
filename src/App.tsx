@@ -11,9 +11,9 @@ function App() {
 		<div className='App'>
       <BrowserRouter>
 			<Routes>
-				<Route path='/' element={<HomePage />} />
-				<Route path='/basket' element={<BasketPage />} />
-				<Route path='/summary' element={<SummaryPage />} />
+				<Route path='/Katarzyna_Chmielecka__Web_Wroclaw' element={<HomePage />} />
+				<Route path='/Katarzyna_Chmielecka__Web_Wroclaw/basket' element={<BasketPage />} />
+				<Route path='/Katarzyna_Chmielecka__Web_Wroclaw/summary' element={<SummaryPage />} />
 			</Routes>
       </BrowserRouter>
 		</div>
