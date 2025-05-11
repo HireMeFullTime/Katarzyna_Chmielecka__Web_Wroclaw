@@ -54,7 +54,7 @@ const CartPage = () => {
 					<Link to={'/summary'}>Podsumowanie zamówienia</Link>
 				</>
 			)}
-			<Link to={'/'}>Strona główna</Link>
+			<Link to={'/'}>Kontynuuj zakupy</Link>
 		</div>
 	);
 };
