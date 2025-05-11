@@ -1,54 +1,43 @@
-# React + TypeScript + Vite
+# Shopping Cart App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description
 
-Currently, two official plugins are available:
+This project is a simple shopping cart web application built with **React**, **TypeScript**, **Redux Toolkit**, and **Vite**.  
+It demonstrates a basic e-commerce workflow: browsing products, adding/removing items from the cart, viewing the order summary, and confirming the order.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## Approach
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **State Management:** The cart state is managed globally using Redux Toolkit (**not persisted between sessions**).
+- **localStorage:** Used for passing order data to the static order confirmation page after placing an order.  
+  The cart will be fully persisted in localStorage in the future.
+- **Routing:** The app uses React Router for navigation between the product list, cart, and order summary.
+- **Order Confirmation:** After placing an order, the user is redirected to a static HTML confirmation page (`order-confirmation.html`) that reads order data from `localStorage`.
+- **Styling:** The app uses a simple CSS file for styling.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## How to Run
+- Live version: https://hiremefulltime.github.io/Katarzyna_Chmielecka__Web_Wroclaw/
+- Local version:
+ (in terminal, on your computer):
+1. **Clone the repository:**
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- git clone (https://github.com/HireMeFullTime/Katarzyna_Chmielecka__Web_Wroclaw.git)
+- cd Katarzyna_Chmielecka__Web_Wroclaw
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+
+2. **Install dependencies:**
+npm install / npm i
+
+3. **Start the development server:**
+npm run dev
+
+
+6. **Open your browser and go to:**  
+http://localhost:5173/Katarzyna_Chmielecka__Web_Wroclaw/
+(or the address shown in your terminal)
+
+---
+
