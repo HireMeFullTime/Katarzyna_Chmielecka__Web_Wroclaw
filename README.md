@@ -34,10 +34,15 @@ npm install / npm i
 3. **Start the development server:**
 npm run dev
 
-
-6. **Open your browser and go to:**  
+4. **Open your browser and go to:**  
 http://localhost:5173/Katarzyna_Chmielecka__Web_Wroclaw/
 (or the address shown in your terminal)
 
 ---
+
+##To do:
+- fully responsive app
+- fully persiste cart
+- login/register
+- purchase history
 
