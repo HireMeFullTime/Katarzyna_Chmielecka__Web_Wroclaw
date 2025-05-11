@@ -33,18 +33,18 @@ const CartPage = () => {
 									<td>
 										{item.price.main}.{item.price.fractional} zł
 									</td>
-									<td>
+									<td className='cart-page__button-container'>
 										<Button
 											name='-'
 											onClick={() => dispatch(decreaseQuantity(item.id))}
 											disabled={item.quantity <= 1}
 										/>
 										{item.quantity}
-										<button onClick={() => dispatch(addToCart(item))}>+</button>
+										<Button name='+' onClick={() => dispatch(addToCart(item))} />
 									</td>
 									<td>{((item.price.main + item.price.fractional / 100) * item.quantity).toFixed(2)} zł</td>
 									<td>
-										<button onClick={() => dispatch(removeFromCart(item.id))}>Usuń</button>
+										<Button name='Usuń' onClick={() => dispatch(removeFromCart(item.id))} />
 									</td>
 								</tr>
 							))}
@@ -55,7 +55,9 @@ const CartPage = () => {
 					<Link to={'/summary'}>Podsumowanie zamówienia</Link>
 				</>
 			)}
-			<Link to={'/'} className='cart-page__link--home'>Kontynuuj zakupy</Link>
+			<Link to={'/'} className='cart-page__link--home'>
+				Kontynuuj zakupy
+			</Link>
 		</div>
 	);
 };
