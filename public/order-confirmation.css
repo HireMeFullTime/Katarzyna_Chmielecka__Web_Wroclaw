@@ -38,7 +38,8 @@ button:hover {
 
 .home-page,
 .cart-page,
-.summary-page {
+.summary-page,
+.confirmation-page {
 	align-items: center;
 	display: flex;
 	flex-direction: column;
@@ -47,7 +48,8 @@ button:hover {
 
 .home-page__title,
 .cart-page__title,
-.summary-page__title {
+.summary-page__title,
+.confirmation-page__title {
 	margin-bottom: 1.25rem;
 }
 
@@ -72,7 +74,8 @@ button:hover {
 }
 
 .cart-page table,
-.summary-page table {
+.summary-page table,
+.confirmation-page table {
 	border-collapse: collapse;
 	border-spacing: 0.06rem;
 	max-width: 28.13rem;
@@ -100,7 +103,8 @@ td {
 }
 
 .cart-page__price,
-.summary-page__price {
+.summary-page__price,
+.confirmation-page__price {
 	margin-bottom: 1.25rem;
 }
 
