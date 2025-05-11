@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <h1>Dziękujemy za zakupy!</h1>
+    <h1>Zamówienie złożone pomyślnie!</h1>
     <div id="order-summary"></div>
     <a href="/Katarzyna_Chmielecka__Web_Wroclaw/">Ponów zakupy</a>
 
@@ -27,9 +27,8 @@
           <thead>
             <tr>
               <th>Produkt</th>
-              <th>Cena</th>
               <th>Ilość</th>
-              <th>Podsuma</th>
+
             </tr>
           </thead>
           <tbody>
@@ -39,9 +38,8 @@
                 html += `
           <tr>
             <td>${item.name}</td>
-            <td>${item.price.main + item.price.fractional / 100}</td>
             <td>${item.quantity}</td>
-            <td>${subtotal} zł</td>
+
           </tr>
         `;
             });
@@ -52,7 +50,6 @@
       `;
             summaryDiv.innerHTML = html;
         }
-
 
         document.querySelector("a").addEventListener("click", () => {
             localStorage.removeItem("lastOrder");
