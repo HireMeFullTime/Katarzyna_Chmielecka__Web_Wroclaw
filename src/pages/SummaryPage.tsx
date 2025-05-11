@@ -18,8 +18,8 @@ const SummaryPage = () => {
 	};
 
 	return (
-		<div>
-			<h1>Podsumowanie zamówienia</h1>
+		<div className='summary-page'>
+			<h1 className='summary-page__title'>Podsumowanie zamówienia</h1>
 			{cart.length === 0 ? (
 				<p>Koszyk jest pusty 😥</p>
 			) : (
@@ -42,16 +42,17 @@ const SummaryPage = () => {
 									</td>
 									<td>{item.quantity}</td>
 									<td>{((item.price.main + item.price.fractional / 100) * item.quantity).toFixed(2)} zł</td>
-									<td></td>
 								</tr>
 							))}
 						</tbody>
 					</table>
-					<h2>Do zapłaty: {total.toFixed(2)} zł</h2>
+					<h2 className='summary-page__price'>Do zapłaty: {total.toFixed(2)} zł</h2>
 					<Button name={'Złóż zamówienie'} onClick={handleOrder} />
 				</>
 			)}
-			<Link to={'/cart'}>Wróć do koszyka</Link>
+			<Link to={'/cart'} className='summary-page__link--cart'>
+				Wróć do koszyka
+			</Link>
 		</div>
 	);
 };
