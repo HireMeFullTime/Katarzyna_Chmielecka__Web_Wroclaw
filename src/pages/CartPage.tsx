@@ -10,8 +10,8 @@ const CartPage = () => {
 	const dispatch = useDispatch();
 	const total = cart.reduce((sum, item) => sum + (item.price.main + item.price.fractional / 100) * item.quantity, 0);
 	return (
-		<div>
-			<h1>Koszyk</h1>
+		<div className='cart-page'>
+			<h1 className='cart-page__title'>Koszyk</h1>
 			{cart.length === 0 ? (
 				<p>Koszyk jest pusty 😥</p>
 			) : (
@@ -23,6 +23,7 @@ const CartPage = () => {
 								<th>Cena</th>
 								<th>Ilość</th>
 								<th>Podsuma</th>
+								<th></th>
 							</tr>
 						</thead>
 						<tbody>
@@ -49,12 +50,12 @@ const CartPage = () => {
 							))}
 						</tbody>
 					</table>
-					<h2>Do zapłaty: {total.toFixed(2)} zł</h2>
+					<h2 className='cart-page__price'>Do zapłaty: {total.toFixed(2)} zł</h2>
 
 					<Link to={'/summary'}>Podsumowanie zamówienia</Link>
 				</>
 			)}
-			<Link to={'/'}>Kontynuuj zakupy</Link>
+			<Link to={'/'} className='cart-page__link--home'>Kontynuuj zakupy</Link>
 		</div>
 	);
 };

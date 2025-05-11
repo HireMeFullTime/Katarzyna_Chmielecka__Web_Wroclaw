@@ -2,27 +2,27 @@
 <html lang="pl">
 
 <head>
-    <meta charset="UTF-8" />
-    <title>Potwierdzenie zamówienia</title>
-
+  <meta charset="UTF-8" />
+  <title>Potwierdzenie zamówienia</title>
+<link rel="stylesheet" href="./src/index.css">
 </head>
 
 <body>
-    <h1>Zamówienie złożone pomyślnie!</h1>
-    <div id="order-summary"></div>
-    <a href="/Katarzyna_Chmielecka__Web_Wroclaw/">Ponów zakupy</a>
+  <h1>Zamówienie złożone pomyślnie!</h1>
+  <div id="order-summary"></div>
+  <a href="/Katarzyna_Chmielecka__Web_Wroclaw/">Ponów zakupy</a>
 
-    <script>
+  <script>
 
-        const items = JSON.parse(localStorage.getItem("lastOrder") || "[]");
-        const total = localStorage.getItem("lastOrderTotal") || "0.00";
+    const items = JSON.parse(localStorage.getItem("lastOrder") || "[]");
+    const total = localStorage.getItem("lastOrderTotal") || "0.00";
 
 
-        const summaryDiv = document.getElementById("order-summary");
-        if (!items.length) {
-            summaryDiv.innerHTML = "<p>Brak danych o zamówieniu.</p>";
-        } else {
-            let html = `
+    const summaryDiv = document.getElementById("order-summary");
+    if (!items.length) {
+      summaryDiv.innerHTML = "<p>Brak danych o zamówieniu.</p>";
+    } else {
+      let html = `
         <table>
           <thead>
             <tr>
@@ -33,31 +33,31 @@
           </thead>
           <tbody>
       `;
-            items.forEach(item => {
-                const subtotal = ((item.price.main + item.price.fractional / 100) * item.quantity).toFixed(2);
-                html += `
+      items.forEach(item => {
+
+        html += `
           <tr>
             <td>${item.name}</td>
             <td>${item.quantity}</td>
 
           </tr>
         `;
-            });
-            html += `
+      });
+      html += `
           </tbody>
         </table>
         <div class="total">Łączna kwota: ${parseFloat(total).toFixed(2)} zł</div>
       `;
-            summaryDiv.innerHTML = html;
-        }
+      summaryDiv.innerHTML = html;
+    }
 
-        document.querySelector("a").addEventListener("click", () => {
-            localStorage.removeItem("lastOrder");
-            localStorage.removeItem("lastOrderTotal");
+    document.querySelector("a").addEventListener("click", () => {
+      localStorage.removeItem("lastOrder");
+      localStorage.removeItem("lastOrderTotal");
 
-            localStorage.removeItem("cart");
-        });
-    </script>
+      localStorage.removeItem("cart");
+    });
+  </script>
 </body>
 
 </html>
