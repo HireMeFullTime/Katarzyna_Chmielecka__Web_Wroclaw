@@ -45,4 +45,5 @@ http://localhost:5173/Katarzyna_Chmielecka__Web_Wroclaw/
 - fully persisted cart
 - login/register
 - purchase history
+- fully responsive
 
